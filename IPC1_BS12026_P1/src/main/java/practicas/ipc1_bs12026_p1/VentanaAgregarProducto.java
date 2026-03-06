@@ -192,9 +192,8 @@ public class VentanaAgregarProducto extends javax.swing.JFrame {
             return;
         }
         //String codigo, String nombre, String Categoria, double Precio, int stock
-        Producto producto = new Producto(codigo, nombre, categoria, Precio, CantidadStock);
-
-        boolean agregado = inventario.agregarProducto(producto);//verificar que haya espacio y el codigo no sea duplicado
+        Producto producto = new Producto(codigo, nombre, categoria, Precio, CantidadStock);//verificar que los parametros ingresados cumplan con las cararteristicas de un producto
+        boolean agregado = inventario.agregarProducto(producto);//verificar que haya espacio, el codigo no sea duplicado y de ser el caso lo almacena en un vector de inventario
 
         if (agregado) {
             JOptionPane.showMessageDialog(this, "Producto agregado correctamente");

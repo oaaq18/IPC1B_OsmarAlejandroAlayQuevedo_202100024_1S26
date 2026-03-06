@@ -10,17 +10,17 @@ public class Inventario {
         Contador = 0;
     }
     
-     public boolean agregarProducto(Producto p) {//p es un objeto creado para usar funciones de la clase producto
+     public boolean agregarProducto(Producto ProductoRecibido) {//p es un objeto creado para usar funciones de la clase producto
 
         if (Contador == Productos.length) {
             return false; // inventario lleno
         }
         //
-        if (buscarPorCodigo(p.getCodigo()) != null) {
+        if (buscarPorCodigo(ProductoRecibido.getCodigo()) != null) {
             return false; // código duplicado
         }
 
-        Productos[Contador] = p;
+        Productos[Contador] = ProductoRecibido;
         Contador++;
 
         return true;
@@ -48,6 +48,10 @@ public class Inventario {
                 encontrados++;
             }
         }
+        
+        if (encontrados == 0) {
+            return null;
+        }
 
         return resultados;
     }
@@ -64,6 +68,9 @@ public class Inventario {
                 resultados[encontrados] = Productos[i];
                 encontrados++;
             }
+        }
+        if (encontrados == 0) {
+            return null;
         }
 
         return resultados;

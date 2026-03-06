@@ -16,6 +16,7 @@ public class VentanaBuscarProducto extends javax.swing.JFrame {
         this.inventario = inventario;
         initComponents();
         BuscarCategoria.removeAllItems();
+        BuscarCategoria.addItem("Todas");
         BuscarCategoria.addItem("Camisa");
         BuscarCategoria.addItem("Pantalon");
         BuscarCategoria.addItem("Accesorio");
@@ -122,21 +123,45 @@ public class VentanaBuscarProducto extends javax.swing.JFrame {
         String Codigobusqueda = BuscarCodigo.getText().trim();
         String NombreBusqueda = BuscarNombre.getText().trim();
         String CategoriaBuscar = BuscarCategoria.getSelectedItem().toString();
+        
         boolean Econtrado =false;
-        String Resultado="RESULTADOS:";
+        String ResultadoBusqueda="";
         
-        if(inventario.buscarPorCodigo(Codigobusqueda)!=null){
-            Econtrado=true;
-            Resultado= Resultado + "\n"+inventario.buscarPorCodigo(Codigobusqueda);
+        //BUSCAR POR NOMBRE
+        if (Codigobusqueda.isEmpty() && CategoriaBuscar.equals("Todas")) {
+            Producto[] ResultadoBusquedaNombre = inventario.buscarPorNombre(NombreBusqueda);
+            
+            if (ResultadoBusquedaNombre!=null) {
+                Econtrado = true;
+                for (int i = 0; i < ResultadoBusquedaNombre.length; i++) {//recorrer el vector resultante de la busqueda
+                    if (ResultadoBusquedaNombre[i] != null) {
+                        ResultadoBusqueda += ResultadoBusquedaNombre[i].toString() + "\n";
+                    }
+                }
+
+            }
         }
-        if(inventario.buscarPorNombre(NombreBusqueda)!=null){
-            Econtrado=true;
-            Resultado= Resultado + "\n"+inventario.buscarPorNombre(NombreBusqueda);
+        //BUSCAR POR CODIGO
+        if(NombreBusqueda.isEmpty() && CategoriaBuscar.equals("Todas") && inventario.buscarPorCodigo(Codigobusqueda)!=null){
+        Econtrado=true;
+            ResultadoBusqueda=inventario.buscarPorCodigo(Codigobusqueda).toString();
         }
-        Resultado=Resultado + "\n"+inventario.buscarPorCategoria(CategoriaBuscar);
+        //Buscar por categoria
         
+        if (Codigobusqueda.isEmpty() && NombreBusqueda.isEmpty()) {
+            Producto[] ResultadosBusquedaCategoria = inventario.buscarPorCategoria(CategoriaBuscar);
+            if(ResultadosBusquedaCategoria!=null){
+                Econtrado= true;
+                for (int i = 0; i < ResultadosBusquedaCategoria.length; i++) {
+                    if(ResultadosBusquedaCategoria[i]!=null){
+                        ResultadoBusqueda+= ResultadosBusquedaCategoria[i].toString() + "\n";
+                    }
+                }
+            }
+        }
+        //RESULTADO
         if (Econtrado) {
-            JOptionPane.showMessageDialog(this, Resultado);
+            JOptionPane.showMessageDialog(this, ResultadoBusqueda);
         }else{
             JOptionPane.showMessageDialog(this, "Producto No econtrado");
         }
