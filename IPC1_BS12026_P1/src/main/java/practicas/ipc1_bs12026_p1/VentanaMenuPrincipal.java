@@ -14,8 +14,8 @@ public class VentanaMenuPrincipal extends javax.swing.JFrame {
 
     //private Producto producto;
     private Inventario inventario;
-    private double totalVenta;
-    private String Descripcion[];
+    
+    
     
     public VentanaMenuPrincipal() {
         inventario = new Inventario(5);//capacidad de inventario para almacenar productos
