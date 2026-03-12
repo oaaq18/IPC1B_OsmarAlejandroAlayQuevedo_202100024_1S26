@@ -125,7 +125,7 @@ El módulo permite agregar uno o varios productos a una venta antes de confirmar
 
 **Captura de pantalla — Ventana Registrar Venta:**
 
-![Ventana Registrar Venta - agregar producto](Caputas/RegistraVenta.png)
+![Ventana Registrar Venta - agregar producto](Capturas/RegistraVenta.png)
 
 
 ---
@@ -146,7 +146,7 @@ Ambos reportes incluyen estilos CSS embebidos para una presentación tabular cla
 
 **Captura de pantalla — Ventana Generar Reporte:**
 
-![Ventana Generar Reporte](Capturas/GenerarReporte.png)
+![Ventana Generar Reporte](Capturas/GenerarReportes.png)
 
 
 
