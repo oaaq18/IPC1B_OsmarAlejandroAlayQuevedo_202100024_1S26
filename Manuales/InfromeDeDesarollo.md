@@ -58,7 +58,7 @@ El menú principal funciona como punto central de navegación. Cada botón abre 
 
 **Captura de pantalla — Menú Principal:**
 
-![Menú Principal](/Capturas/menuprincipal.png)
+![Menú Principal](Capturas/menuprincipal.png)
 
 ---
 
@@ -75,7 +75,7 @@ El módulo permite registrar un nuevo producto ingresando: nombre, categoría (m
 
 **Captura de pantalla — Ventana Agregar Producto:**
 
-![Ventana Agregar Producto](/Capturas/AgregarProducto.png)
+![Ventana Agregar Producto](Capturas/AgregarProducto.png)
 
 
 ---
@@ -93,7 +93,7 @@ Los resultados se muestran en un `JOptionPane` con los datos principales del pro
 
 **Captura de pantalla — Ventana Buscar Producto:**
 
-![Ventana Buscar Producto](/Capturas/Buscarproducto.png)
+![Ventana Buscar Producto](Capturas/Buscarproducto.png)
 
 ---
 
@@ -108,7 +108,7 @@ El módulo permite eliminar un producto del inventario mediante su código únic
 
 **Captura de pantalla — Ventana Eliminar Producto:**
 
-![Ventana Eliminar Producto](/Capturas/Eliminar.png)
+![Ventana Eliminar Producto](Capturas/Eliminar.png)
 
 ---
 
@@ -125,7 +125,7 @@ El módulo permite agregar uno o varios productos a una venta antes de confirmar
 
 **Captura de pantalla — Ventana Registrar Venta:**
 
-![Ventana Registrar Venta - agregar producto](/Caputas/RegistrarVenta.png)
+![Ventana Registrar Venta - agregar producto](Caputas/RegistrarVenta.png)
 
 
 ---
@@ -146,9 +146,9 @@ Ambos reportes incluyen estilos CSS embebidos para una presentación tabular cla
 
 **Captura de pantalla — Ventana Generar Reporte:**
 
-![Ventana Generar Reporte](/Capturas/GenerarReporte.png)
+![Ventana Generar Reporte](Capturas/GenerarReporte.png)
 
-> *Insertar aquí captura de la ventana de reportes.*
+
 
 
 ---
