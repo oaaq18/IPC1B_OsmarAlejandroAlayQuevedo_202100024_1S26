@@ -58,7 +58,7 @@ El menú principal funciona como punto central de navegación. Cada botón abre 
 
 **Captura de pantalla — Menú Principal:**
 
-![Menú Principal](Capturas/menuprincipal.png)
+![Menú Principal](Capturas/MenuPrincipal.png)
 
 ---
 
@@ -125,7 +125,7 @@ El módulo permite agregar uno o varios productos a una venta antes de confirmar
 
 **Captura de pantalla — Ventana Registrar Venta:**
 
-![Ventana Registrar Venta - agregar producto](Caputas/RegistrarVenta.png)
+![Ventana Registrar Venta - agregar producto](Caputas/RegistraVenta.png)
 
 
 ---
