@@ -17,6 +17,7 @@ public class VentanaGenerarReporte extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaGenerarReporte.class.getName());
 
     private Inventario inventario;
+    private Venta venta;
     public VentanaGenerarReporte(Inventario inventario) {
         this.inventario=inventario;
         initComponents();
@@ -41,6 +42,7 @@ public class VentanaGenerarReporte extends javax.swing.JFrame {
         jLabel1.setText("REPORTES");
 
         BotonReporteVentas.setText("REPORTE DE VENTAS");
+        BotonReporteVentas.addActionListener(this::BotonReporteVentasActionPerformed);
 
         BotonReporteProductos.setText("REPORTE DE PRODUCTOS");
         BotonReporteProductos.addActionListener(this::BotonReporteProductosActionPerformed);
@@ -98,6 +100,15 @@ public class VentanaGenerarReporte extends javax.swing.JFrame {
             // TODO add your handling code here:
             dispose();
     }//GEN-LAST:event_BotonRegresarActionPerformed
+
+    private void BotonReporteVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonReporteVentasActionPerformed
+         if (Venta.getContadorVentas()==0) {
+             JOptionPane.showMessageDialog(this, "ERROR: No hay ventas registradas");
+        }else{
+            venta.reporteVentas();
+            JOptionPane.showMessageDialog(this,"Reporte HTML Generado exitosamente");
+        }
+    }//GEN-LAST:event_BotonReporteVentasActionPerformed
 
     /**
      * @param args the command line arguments

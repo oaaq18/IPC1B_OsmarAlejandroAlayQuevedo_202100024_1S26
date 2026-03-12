@@ -17,7 +17,7 @@ public class VentanaVenta extends javax.swing.JFrame {
     private Inventario inventario;
     
     private double TotalVenta=0;
-    private String Descripcion="----------------DESCRIPCION------------\n";
+    private String Descripcion="";
     
     
     //private Producto producto;
@@ -157,7 +157,7 @@ public class VentanaVenta extends javax.swing.JFrame {
             }else{
                 System.out.println("PRODUCTO: A agregar"+producto.toString());
                 Subtotal+=Cantidad*producto.getPrecio();
-                Descripcion+="NOMBRE: "+producto.getNombre()+" | CANTEGORIA: "+producto.getCategoria()+"| CANTIDAD: "+Cantidad+" |SUBTOTAL "+Subtotal+"\n";
+                Descripcion+="NOMBRE: "+producto.getNombre()+" | CANTEGORIA: "+producto.getCategoria()+"| CANTIDAD: "+Cantidad+"| PRECIO:"+producto.getPrecio()+" |SUBTOTAL "+Subtotal+"\n";
                 System.out.println(Descripcion);
                 producto.reducirStock(Cantidad);
                 TotalVenta+=Subtotal;

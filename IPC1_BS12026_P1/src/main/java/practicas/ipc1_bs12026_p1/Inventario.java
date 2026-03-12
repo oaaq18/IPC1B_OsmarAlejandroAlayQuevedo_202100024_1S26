@@ -89,7 +89,7 @@ public class Inventario {
             System.out.println(Productos[i]);//en consola 
         }
         try {
-        String ProductosHTML= ahora.format(formato)+"_stock.html";
+        String ProductosHTML= "reportes/"+ahora.format(formato)+"_stock.html";
         BufferedWriter writer = new BufferedWriter(new FileWriter(ProductosHTML));
 
         writer.write("<!DOCTYPE html>");

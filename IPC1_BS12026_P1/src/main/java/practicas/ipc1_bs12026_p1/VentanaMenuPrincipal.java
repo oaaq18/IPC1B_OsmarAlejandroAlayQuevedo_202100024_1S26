@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package practicas.ipc1_bs12026_p1;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -135,6 +134,7 @@ public class VentanaMenuPrincipal extends javax.swing.JFrame {
 
     private void Boton_VerDAtosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_VerDAtosActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Osmar Alejandro Alay Quevedo\n 202100024");
     }//GEN-LAST:event_Boton_VerDAtosActionPerformed
 
     private void Boton_GenerarRepoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_GenerarRepoActionPerformed
@@ -144,6 +144,7 @@ public class VentanaMenuPrincipal extends javax.swing.JFrame {
 
     private void Boton_SaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SaliActionPerformed
         // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_Boton_SaliActionPerformed
 
     /**
